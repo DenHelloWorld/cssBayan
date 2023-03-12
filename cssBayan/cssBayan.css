@@ -45,6 +45,10 @@ body{
    input[name = 'meme']:hover + .span  {
       background-color: #161b22;
    }
+   .container input[name = 'meme']:hover + .lock  {
+
+      transform: rotate(45deg);
+   }
    input[name = 'meme']:hover + .span .pic {
       opacity: 1;
       color: rgb(253, 253, 253);
@@ -54,7 +58,7 @@ body{
    }
    .container:hover input[name = 'meme'] + .span .lock{
       background-image: url(./icons/close-acc.svg);
-   
+      
    }
    .container:hover input[name = 'meme']:checked + .span .lock{
       opacity: 1;
@@ -69,7 +73,13 @@ body{
 }
 
 input{
-   display: none;
+   margin: 0em;
+   padding: 0em;
+   width: 0em;
+   height: 0em;
+   opacity: 0;
+   visibility: hidden;
+   clip-path: polygon(0 0, 0 0, 0 0, 0 0);
 }
 label{
    cursor: pointer;
