@@ -67,6 +67,9 @@ body{
       background-image: url(./icons/close-acc.svg);
       
    }
+   input[name = 'meme']:hover + .span .lock{
+      transform: rotate(45deg);
+   }
    .container:hover input[name = 'meme']:checked + .span .lock{
       opacity: 1;
       background-image: url(./icons/open-acc.svg);
