@@ -21,6 +21,7 @@ p{
       font-size: 100%;
    }
 }
+
 body{
    background-color: #010409;
    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
@@ -32,7 +33,9 @@ body{
 input{
    display: none;
 }
-
+label{
+   cursor: pointer;
+}
 .container{
    max-width: 50em;
    padding: 0 3em;
@@ -108,7 +111,7 @@ input[name = 'meme']:active + .span {
    background-color: #161b22;
 
 }
-input[name = 'meme']:hover + .span  {
+/* input[name = 'meme']:hover + .span  {
    background-color: #161b22;
 }
 input[name = 'meme']:hover + .span .pic {
@@ -117,7 +120,7 @@ input[name = 'meme']:hover + .span .pic {
    height: 10em;
    width: 15em;
    transition: all 1s;
-}
+} */
 input[name = 'meme']:checked + .span .pic {
    opacity: 0.8;
    height: 10em;
@@ -137,21 +140,54 @@ input[name = 'meme']:checked + .span {
    transition: all 1s;
 }
 
-.container:hover input[name = 'meme'] + .span .lock{
-   background-image: url(./icons/close-acc.svg);
-
-}
 
 
-.container:hover input[name = 'meme']:checked + .span .lock{
+
+/* .container:hover input[name = 'meme']:checked + .span .lock{
    opacity: 1;
    background-image: url(./icons/open-acc.svg);
    transform: rotate(45deg);
-}
+} */
+/* .container:hover input[name = 'meme']:active + .span .lock{
+   opacity: 1;
+
+   transform: rotate(90deg);
+} */
 .container:hover input[name = 'meme']:active + .span .lock{
    opacity: 1;
 
    transform: rotate(90deg);
 }
+.container:hover input[name = 'meme']:checked + .span .lock{
+   opacity: 1;
+   background-image: url(./icons/open-acc.svg);
+   transform: rotate(45deg);
+}
+input[name = 'meme'] +  .lock{
+   background-image: url(./icons/close-acc.svg);
 
+}
+.container input[name = 'meme'] + .span .lock{
+   background-image: url(./icons/close-acc.svg);
 
+}
+body:active + .lock{
+   opacity: 0g;
+}
+@media (hover:hover) {
+   input[name = 'meme']:hover + .span  {
+      background-color: #161b22;
+   }
+   input[name = 'meme']:hover + .span .pic {
+      opacity: 1;
+      color: rgb(253, 253, 253);
+      height: 10em;
+      width: 15em;
+      transition: all 1s;
+   }
+   .container:hover input[name = 'meme'] + .span .lock{
+      background-image: url(./icons/close-acc.svg);
+   
+   }
+
+}
