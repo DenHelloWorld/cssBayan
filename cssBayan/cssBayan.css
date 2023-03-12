@@ -121,6 +121,9 @@ h1{
 .pic-5{
    background-image: url(./img/js5.jpg);
 }
+.pic-6{
+   background-image: url(./img/ladno.jpg);
+}
 .string-meme{
    display: flex; 
    width: 100%;
